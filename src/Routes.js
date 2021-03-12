@@ -58,23 +58,10 @@ const renderRoutes = () => (
         </>
       )}
     />
-    <Route
-      path="/login"
-      exact
-      component={Login}
-    />
   </Switch>
 );
 
 function Routes() {
-  const user = useSelector(state => state.account.user);
-  const history = useHistory();
-  if(!user){
-    history.push('/login');
-  }
-  else{
-    history.push('/home');
-  }
   return renderRoutes({});
 }
 
